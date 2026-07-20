@@ -1,0 +1,265 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fdfbf7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* الهيدر */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #ffffff;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #8b7355;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-size: 0.7rem; 
+    color: #999;
+}
+
+/* زر الهامبرغر (مخفي على الشاشات الكبيرة) */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.3s;
+}
+
+/* روابط التنقل للشاشات الكبيرة */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #8b7355;
+}
+
+/* الأقسام وتوزيع العناصر */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+}
+
+.hero-image {
+    background: url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1000&q=80') center/cover no-repeat;
+    min-height: 400px;
+}
+
+.hero-text {
+    background-color: #f4efe6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 1.8rem;
+    color: #556b2f;
+    max-width: 400px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.custom-shape-img {
+    width: 250px;
+    height: 250px;
+    background: url('https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?auto=format&fit=crop&w=500&q=80') center/cover no-repeat;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+/* القسم الأوسط */
+.green-section {
+    background-color: #939e85;
+    color: #ffffff;
+    padding: 60px 10%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.green-section .left-col h2 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.green-section .right-col p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.green-section .right-col a {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+/* القسم السفلي والكارد */
+.explore-section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.explore-section > h3 {
+    margin-bottom: 40px;
+    color: #666;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.card-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f4efe6;
+    border-radius: 0px 40px 0px 40px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card-img {
+    background: url('https://images.unsplash.com/photo-1516253593875-bd7ba052fbc5?auto=format&fit=crop&w=600&q=80') center/cover no-repeat;
+    min-height: 300px;
+    border-bottom-right-radius: 80px;
+}
+
+.card-content {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.card-content h4 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #b59975;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #8b7355;
+}
+
+/* ------------------ التجاوب مع شاشات الموبايل ------------------ */
+@media (max-width: 768px) {
+    /* إظهار زر الهامبرغر */
+    .hamburger {
+        display: flex;
+    }
+
+    /* تحويل القائمة لتصبح منسدلة عمودياً ومخفية بشكل افتراضي */
+    nav {
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    /* الكلاس الذي سيتم تفعيله بواسطة الجافا سكريبت لإظهار القائمة */
+    nav.active {
+        display: block;
+    }
+
+    /* تحويل كل تقسيمات الـ Grid إلى عمود واحد لتناسب الموبايل */
+    .hero-section, .green-section, .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .green-section {
+        text-align: center;
+    }
+
+    .card-content {
+        align-items: center;
+        text-align: center;
+    }
+
+    .card-img {
+        border-bottom-right-radius: 0px;
+    }
+
+    /* حركة بسيطة لزر الهامبرغر عند الضغط عليه (يتحول لشكل X) */
+    .toggle-animation span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .toggle-animation span:nth-child(2) {
+        opacity: 0;
+    }
+    .toggle-animation span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}

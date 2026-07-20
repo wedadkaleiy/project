@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Big - Live Simply</title>
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- الهيدر والقائمة -->
+    <header>
+        <div class="logo">Think Big <br><span>Live Simply</span></div>
+        
+        <!-- زر الهامبرغر للموبايل -->
+        <div class="hamburger" id="hamburger-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- القائمة الروابط -->
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#">about</a></li>
+                <li><a href="#">offerings</a></li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- القسم الأول (Hero Section) -->
+    <section class="hero-section">
+        <div class="hero-image"></div>
+        <div class="hero-text">
+            <h1>Permaculture skills and lifestyle design for a simpler, more sustainable life.</h1>
+            <div class="custom-shape-img"></div>
+        </div>
+    </section>
+
+    <!-- القسم الزيتي الأوسط -->
+    <section class="green-section">
+        <div class="left-col">
+            <h2>Live slower.<br>Choose enough.</h2>
+        </div>
+        <div class="right-col">
+            <p>Many of us dream of living a simpler life, yet knowing the basic steps to create a dynamic, self-reliant garden can be tough.</p>
+            <p>Simple living doesn't mean giving up everything you love - it's just a way of clearing away the excess so you thrive with what truly matters.</p>
+            <a href="#">LEARN WITH US</a>
+        </div>
+    </section>
+
+    <!-- القسم السفلي -->
+    <section class="explore-section">
+        <h3>Scroll to Explore</h3>
+        
+        <div class="card-container">
+            <div class="card-img"></div>
+            <div class="card-content">
+                <h4>Mini Courses and Books</h4>
+                <p>Learn how to design your life with permaculture, skills, and nature-based living.</p>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- كود الجافا سكريبت البسيط للتحكم بالقائمة -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        // عند الضغط على زر الهامبرغر، نقوم بإضافة أو إزالة كلاس active
+        hamburgerBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburgerBtn.classList.toggle('toggle-animation'); // اختيارية لعمل حركة للزر
+        });
+    </script>
+</body>
+</html>
